@@ -11,6 +11,8 @@
 @interface ViewController : NSViewController
 
 - (void)windowClosed:(NSNotification*)notification;
+- (void)inputTextDidChange:(NSNotification*)notification;
+@property (weak) IBOutlet NSTextField *inputTextField;
 
 @end
 

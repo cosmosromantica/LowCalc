@@ -15,6 +15,7 @@
 
     // Do any additional setup after loading the view.
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(windowClosed:) name:NSWindowWillCloseNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(inputTextDidChange:) name:NSControlTextDidChangeNotification object:_inputTextField];
 }
 
 - (void)setRepresentedObject:(id)representedObject {
@@ -28,6 +29,13 @@
     NSLog(@"Terminating application...");
 #endif
     [[NSApplication sharedApplication] terminate:self];
+}
+
+- (void)inputTextDidChange:(NSNotification *)notification {
+    NSString *inputString = [notification.object stringValue];
+#ifdef DEBUG
+    NSLog(@"Input expression string changed... (%@)", inputString);
+#endif
 }
 
 @end
