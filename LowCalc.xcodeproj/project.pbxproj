@@ -96,6 +96,7 @@
 		48E48A7C1F88D53B00EF8EFE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = LC;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Александр Гелета";
 				TargetAttributes = {
