@@ -80,6 +80,14 @@
 - (NSNumber*_Nonnull)getLastResult;
 
 /**
+ Returns state for bad rounding mode (String style).
+ @return If true then bad mode is in use for rounding results.
+ @see LCCalc.
+ @warning It is highly not recommended to use this mode.
+ */
+- (BOOL)getBadModeOn;
+
+/**
  Contains the result of last mathematic operation.
  @return Result as NSNumber*.
  @see LCCalc.
@@ -101,6 +109,6 @@
  @see LCCalc.
  @warning This property is thread unsafe.
  */
-@property (readwrite, nonatomic) BOOL badModeOn;
+@property (readwrite, nonatomic, getter=getBadModeOn) BOOL badModeOn;
 
 @end
