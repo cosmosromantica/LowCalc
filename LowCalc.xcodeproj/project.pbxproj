@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		481326FC1F8BC1FB00298CB0 /* LCCalc+LCCalcSingleExpressionString.m in Sources */ = {isa = PBXBuildFile; fileRef = 481326FB1F8BC1FB00298CB0 /* LCCalc+LCCalcSingleExpressionString.m */; };
 		48E48A891F88D53B00EF8EFE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E48A881F88D53B00EF8EFE /* AppDelegate.m */; };
 		48E48A8C1F88D53B00EF8EFE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E48A8B1F88D53B00EF8EFE /* ViewController.m */; };
 		48E48A8E1F88D53B00EF8EFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48E48A8D1F88D53B00EF8EFE /* Assets.xcassets */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		481326FA1F8BC1FB00298CB0 /* LCCalc+LCCalcSingleExpressionString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LCCalc+LCCalcSingleExpressionString.h"; sourceTree = "<group>"; };
+		481326FB1F8BC1FB00298CB0 /* LCCalc+LCCalcSingleExpressionString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "LCCalc+LCCalcSingleExpressionString.m"; sourceTree = "<group>"; };
 		48E48A841F88D53B00EF8EFE /* LowCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LowCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48E48A871F88D53B00EF8EFE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		48E48A881F88D53B00EF8EFE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -71,6 +74,8 @@
 				48E48A951F88D53B00EF8EFE /* LowCalc.entitlements */,
 				48E48A9D1F88E03100EF8EFE /* LCCalc.h */,
 				48E48A9E1F88E03100EF8EFE /* LCCalc.m */,
+				481326FA1F8BC1FB00298CB0 /* LCCalc+LCCalcSingleExpressionString.h */,
+				481326FB1F8BC1FB00298CB0 /* LCCalc+LCCalcSingleExpressionString.m */,
 			);
 			path = LowCalc;
 			sourceTree = "<group>";
@@ -150,6 +155,7 @@
 				48E48A9F1F88E03100EF8EFE /* LCCalc.m in Sources */,
 				48E48A941F88D53B00EF8EFE /* main.m in Sources */,
 				48E48A891F88D53B00EF8EFE /* AppDelegate.m in Sources */,
+				481326FC1F8BC1FB00298CB0 /* LCCalc+LCCalcSingleExpressionString.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
