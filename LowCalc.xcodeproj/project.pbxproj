@@ -12,6 +12,7 @@
 		48E48A8E1F88D53B00EF8EFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48E48A8D1F88D53B00EF8EFE /* Assets.xcassets */; };
 		48E48A911F88D53B00EF8EFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48E48A8F1F88D53B00EF8EFE /* Main.storyboard */; };
 		48E48A941F88D53B00EF8EFE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E48A931F88D53B00EF8EFE /* main.m */; };
+		48E48A9F1F88E03100EF8EFE /* LCCalc.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E48A9E1F88E03100EF8EFE /* LCCalc.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,8 @@
 		48E48A921F88D53B00EF8EFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48E48A931F88D53B00EF8EFE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		48E48A951F88D53B00EF8EFE /* LowCalc.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LowCalc.entitlements; sourceTree = "<group>"; };
+		48E48A9D1F88E03100EF8EFE /* LCCalc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCCalc.h; sourceTree = "<group>"; };
+		48E48A9E1F88E03100EF8EFE /* LCCalc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCCalc.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +69,8 @@
 				48E48A921F88D53B00EF8EFE /* Info.plist */,
 				48E48A931F88D53B00EF8EFE /* main.m */,
 				48E48A951F88D53B00EF8EFE /* LowCalc.entitlements */,
+				48E48A9D1F88E03100EF8EFE /* LCCalc.h */,
+				48E48A9E1F88E03100EF8EFE /* LCCalc.m */,
 			);
 			path = LowCalc;
 			sourceTree = "<group>";
@@ -142,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48E48A8C1F88D53B00EF8EFE /* ViewController.m in Sources */,
+				48E48A9F1F88E03100EF8EFE /* LCCalc.m in Sources */,
 				48E48A941F88D53B00EF8EFE /* main.m in Sources */,
 				48E48A891F88D53B00EF8EFE /* AppDelegate.m in Sources */,
 			);

@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "LCCalc.h"
 
 @implementation ViewController
 
@@ -16,6 +17,10 @@
     // Do any additional setup after loading the view.
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(windowClosed:) name:NSWindowWillCloseNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(inputTextDidChange:) name:NSControlTextDidChangeNotification object:_inputTextField];
+    LCCalc *calc = [[LCCalc alloc] initWithPrecision:(NSUInteger)2];
+    [calc setBadModeOn:false];
+    [calc addRight:@5 toLeft:@10];
+    NSLog(@"%@", [calc.lastResult stringValue]);
 }
 
 - (void)setRepresentedObject:(id)representedObject {
