@@ -700,11 +700,11 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="251" height="60"/>
+                        <rect key="frame" x="0.0" y="0.0" width="332" height="110"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kkM-3R-nMd">
-                                <rect key="frame" x="106" y="20" width="96" height="22"/>
+                                <rect key="frame" x="106" y="70" width="206" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="2+2" drawsBackground="YES" id="leA-yG-Idc">
                                     <font key="font" metaFont="system"/>
@@ -713,7 +713,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TD8-lr-YXN">
-                                <rect key="frame" x="18" y="23" width="82" height="17"/>
+                                <rect key="frame" x="18" y="73" width="82" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Выражение:" id="BfN-C8-Pqw">
                                     <font key="font" metaFont="system"/>
@@ -721,8 +721,45 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hsZ-es-Qp4">
+                                <rect key="frame" x="104" y="45" width="145" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <sliderCell key="cell" state="on" alignment="left" maxValue="15" doubleValue="2" tickMarkPosition="above" numberOfTickMarks="16" allowsTickMarkValuesOnly="YES" sliderType="linear" id="0CT-X8-16b"/>
+                                <connections>
+                                    <action selector="precisionSliderValueDidChange:" target="XfG-lQ-9wD" id="5bS-MD-zOr"/>
+                                </connections>
+                            </slider>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wCA-fC-830">
+                                <rect key="frame" x="34" y="47" width="66" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Точность:" id="ylh-5e-N3J">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Efc-RA-K4f">
+                                <rect key="frame" x="253" y="46" width="61" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="HQ" bezelStyle="regularSquare" imagePosition="left" alignment="center" inset="2" id="a9u-Ns-Xmj">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="hqSwitchValueChanged:" target="XfG-lQ-9wD" id="X8e-yL-MP7"/>
+                                </connections>
+                            </button>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xVb-4X-x6F">
+                                <rect key="frame" x="130" y="22" width="92" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" placeholderString="Результат" id="eSM-ZD-upp">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                             <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yeb-z1-FZC">
-                                <rect key="frame" x="208" y="18" width="25" height="25"/>
+                                <rect key="frame" x="289" y="17" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="help" bezelStyle="helpButton" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="HFh-Jc-cqn">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -732,12 +769,15 @@
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="badModeOnSwitch" destination="Efc-RA-K4f" id="0m2-55-3nC"/>
                         <outlet property="inputTextField" destination="kkM-3R-nMd" id="Rav-cB-job"/>
+                        <outlet property="precisionSlider" destination="hsZ-es-Qp4" id="fpw-ho-59G"/>
+                        <outlet property="resultLabel" destination="xVb-4X-x6F" id="JO4-uk-0b6"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-39.5" y="550"/>
+            <point key="canvasLocation" x="1" y="575"/>
         </scene>
     </scenes>
 </document>
